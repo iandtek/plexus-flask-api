@@ -13,6 +13,7 @@ google-api-python-client = "*"
 google-auth-oauthlib = "*"
 google-auth-httplib2 = "*"
 pprint = "*"
+apscheduler = "*"
 
 [requires]
 python_version = "2.7"

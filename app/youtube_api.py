@@ -37,6 +37,3 @@ def data():
 
 def save_data():
     json.dump(data(), open('plexus.json', 'wb'))
-
-
-save_data()
