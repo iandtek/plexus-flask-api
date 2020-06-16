@@ -38,7 +38,7 @@ def last():
     return last_time_updated
 
 
-@app.route("/sync")
-def sync():
-    save_data()
-    return "Synchronization Complete"
+# @app.route("/sync")
+# def sync():
+#     save_data()
+#     return "Synchronization Complete"
