@@ -3,6 +3,7 @@ import time
 import atexit
 from apscheduler.schedulers.background import BackgroundScheduler
 from .youtube_api import save_data
+from flask_cors import CORS, cross_origin
 
 last_time_updated = time.strftime("%A, %d. %B %Y %I:%M:%S %p")
 
@@ -20,9 +21,12 @@ scheduler.start()
 atexit.register(lambda: scheduler.shutdown())
 
 app = Flask(__name__)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 
 @app.route("/api.json")
+@cross_origin()
 def api():
     with open('plexus.json', 'r') as file_data:
         json_data = json.load(file_data)
