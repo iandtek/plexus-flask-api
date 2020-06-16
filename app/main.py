@@ -2,14 +2,14 @@ from flask import Flask, json, jsonify
 import time
 import atexit
 from apscheduler.schedulers.background import BackgroundScheduler
-import youtube_api
+from youtube_api import save_data
 
 last_time_updated = time.strftime("%A, %d. %B %Y %I:%M:%S %p")
 
 
 def update_database():
     last_time_updated = time.strftime("%A, %d. %B %Y %I:%M:%S %p")
-    youtube_api.save_data()
+    save_data()
 
 
 scheduler = BackgroundScheduler()
