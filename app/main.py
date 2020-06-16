@@ -2,7 +2,7 @@ from flask import Flask, json, jsonify
 import time
 import atexit
 from apscheduler.schedulers.background import BackgroundScheduler
-from youtube_api import save_data
+from .youtube_api import save_data
 
 last_time_updated = time.strftime("%A, %d. %B %Y %I:%M:%S %p")
 
