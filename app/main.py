@@ -36,3 +36,9 @@ def api():
 @app.route("/last")
 def last():
     return last_time_updated
+
+
+@app.route("/sync")
+def sync():
+    save_data()
+    return "Synchronization Complete"
