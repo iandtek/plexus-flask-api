@@ -36,4 +36,4 @@ def data():
 
 
 def save_data():
-    json.dump(data(), open('plexus.json', 'wb'))
+    json.dump(data(), open('plexus.json', 'w', encoding="utf8"))
