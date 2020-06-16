@@ -20,13 +20,15 @@ scheduler.start()
 atexit.register(lambda: scheduler.shutdown())
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'the quick brown fox jumps over the lazy   dog'
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 
 @app.route("/api.json")
 def api():
     with open('plexus.json', 'r') as file_data:
         json_data = json.load(file_data)
-    return jsonify(json_data)
+    return jsonify(json_data).headers.add('Access-Control-Allow-Origin', '*')
 
 
 @app.route("/last")
