@@ -32,6 +32,3 @@ def api():
 @app.route("/last")
 def last():
     return last_time_updated
-
-
-app.run()
