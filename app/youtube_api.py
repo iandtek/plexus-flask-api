@@ -9,7 +9,8 @@ youtube = build('youtube', 'v3', developerKey=API_KEY)
 def get_playlists():
     request = youtube.playlists().list(
         part="snippet",
-        channelId="UCp0Kd665CtievA0ss105ujA"
+        channelId="UCp0Kd665CtievA0ss105ujA",
+        maxResults=50
     )
     return request.execute()
 
