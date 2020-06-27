@@ -10,7 +10,7 @@ cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 
 
-@app.route("/")
+@app.route("/api.json")
 @cross_origin()
 def api():
     with open('plexus.json', 'r') as file_data:
