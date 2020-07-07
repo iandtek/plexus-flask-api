@@ -44,7 +44,7 @@ def order():
         },
         "assets": [
             {
-                "src": raw['logo'][0],
+                "src": raw['logo'][0].replace("%20", " "),
                 "type": "image",
                 "layerName": "logo"
             },
