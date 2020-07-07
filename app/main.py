@@ -39,7 +39,7 @@ def order():
     order = {
         "user": raw['q3_email3'],
         "template": {
-            "src": "file:///E:/nexrender/chromatic.aep",
+            "src": "file:///E:/plexus/templates/Simple.aep",
             "composition": "720p"
         },
         "assets": [
