@@ -40,7 +40,7 @@ def order():
         "user": raw['q3_email3'],
         "template": {
             "src": "file:///E:/plexus/templates/Simple.aep",
-            "composition": "720p"
+            "composition": raw['q7_products']['special_1004']['item_0'].split(' ')[0]
         },
         "assets": [
             {
