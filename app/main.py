@@ -33,13 +33,13 @@ def last():
 
 @app.route("/order", methods=['POST'])
 def order():
-    url = 'http://andtek.ddns.net:3000/api/v1/jobs'
+    url = 'http://ec2-54-157-162-149.compute-1.amazonaws.com:3000/api/v1/jobs'
     raw = json.loads(request.form.get('rawRequest'))
 
     order = {
         "user": raw['q3_email3'],
         "template": {
-            "src": "file:///E:/plexus/templates/Simple.aep",
+            "src": "file:///E:/plexus/templates/" + raw["q19_productName"] + ".aep",
             "composition": raw['q7_products']['special_1004']['item_0'].split(' ')[0]
         },
         "assets": [
