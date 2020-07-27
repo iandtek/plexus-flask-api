@@ -90,5 +90,6 @@ def order():
         }
     }
     print(order)
-    x = requests.post(url, json=order)
+    x = requests.post(url, json=order, headers={
+                      "nexrender-secret": "l10nh3arT"})
     return x.text
