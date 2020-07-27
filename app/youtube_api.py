@@ -2,7 +2,7 @@ from googleapiclient.discovery import build
 from pprint import pprint
 import json
 
-API_KEY = 'AIzaSyBcaYzKl8KLwEA0pp-e6X4oQvoz0cXkhSQ'
+API_KEY = 'AIzaSyDkQ0u8zqivMbs9ndnaG5H5KJh83Ajzz9g'
 youtube = build('youtube', 'v3', developerKey=API_KEY)
 
 
